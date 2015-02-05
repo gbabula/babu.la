@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>babu.la</title>
+
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css" />
+        <link rel="stylesheet" href="src/static/bundle.css" />
+    </head>
+    <body>
+
+        <main id="babula" data-bind="attr: {
+            'class': $data.css,
+            'data-g5knockout-instance': $data.g5knockout_instance,
+            'data-g5knockout-visible': $data.g5knockout_visible,
+            'data-g5knockout-bound': $data.g5knockout_bound
+        }">
+
+            <section data-bind="template: { name: 'home-template' }">
+                <span class="loading">Loading&hellip;</span>
+            </sction>
+
+        </main>
+
+        <!-- bundled JS -->
+        <script src="src/static/bundle.js"></script>
+
+        <!-- home template -->
+        <script type="text/html" id="home-template">
+
+            // TODO
+
+        </script>
+
+    </body>
+</html>
