@@ -2,7 +2,18 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>babu.la</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Greg Babula | Software Engineer</title>
+
+        <meta name="description" content="Greg Babula, Software Engineer located in New York City." />
+        <meta name="viewport" content="width=device-width" />
+
+        <meta property="og:title" content="Greg Babula, Software Engineer" />
+        <meta property="og:description" content="Greg Babula, Software Engineer located in New York City." />
+        <meta property="og:type" content="website" />
+
+        <meta name="robots" content="index,follow" />
+        <meta name="robots" content="noodp" />
 
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css" />
         <link rel="stylesheet" href="src/static/bundle.css" />
@@ -25,10 +36,85 @@
         <!-- bundled JS -->
         <script src="src/static/bundle.js"></script>
 
-        <!-- home template -->
+        <!-- home template : change to KO bindings -->
         <script type="text/html" id="home-template">
 
-            // TODO
+            <header class="page-header" id="top">
+                <h1>
+                    <a href="{{ individual.header.url }}">
+                        {{ individual.header.title }}
+                    </a>
+                    <small>{{ individual.header.subtitle }}</small>
+                </h1>
+            </header>
+
+            <section class="content-primary content-primary-home">
+
+                <article>
+
+                    <h2>About</h2>
+
+                        <p class="muted"><em>{{ individual.position.title }} at <a href="{{ individual.position.url }}"
+                                target="_blank">{{ individual.position.company }}</a>.</em></p>
+
+                        <p class="muted"><em>{{ individual.description }}</em></p>
+
+                    </article>
+
+                <hr />
+
+                <div class="row">
+                    <div class="span6">
+                        <h3 id="expertise">Expertise</h3>
+
+                        <ul class="list-object unstyled">
+                            <li ng-repeat="expertise in individual.expertise">
+                            {{ expertise }}
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="span2">
+                        <h3 id="thoughts">Thoughts</h3>
+
+                        <ul class="list-object unstyled">
+                            <li ng-repeat="thought in thoughts">
+                            <a href="{{ thought.url }}" class="{{ thought.title|lowercase }}"
+                                target="_blank">{{ thought.title }}</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="span2">
+                        <h3 id="projects">Projects</h3>
+
+                        <ul class="list-object unstyled">
+                            <li ng-repeat="project in projects">
+                            <a href="{{ project.url }}" class="project {{ project.title|lowercase }}"
+                                target="_blank">{{ project.title }}</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="span2">
+                        <h3 id="elsewhere">Elsewhere</h3>
+
+                        <ul class="list-object unstyled">
+                            <li ng-repeat="social in socialMedia">
+                            <a href="{{ social.url }}" class="social {{ social.title|lowercase }}"
+                                target="_blank">{{ social.title }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <footer class="page-footer" role="contentinfo">
+
+                <a href="#top" class="btn btn-link">Return Top</a>
+
+            </footer>
 
         </script>
 
