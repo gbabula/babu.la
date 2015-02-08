@@ -2,7 +2,7 @@
   "name": "Greg Babula",
   "url": "babu.la",
   "position": {
-    "title": "User Interface Engineer",
+    "title": "Software Engineer",
     "company": "Major League Baseball",
     "url": "http://www.mlb.com",
     "description": "Client side developer wth over a decade of experience.",
@@ -25,10 +25,6 @@
       {
         "title": "Github",
         "url": "https://github.com/gbabula"
-      },
-      {
-        "title": "LinkedIn",
-        "url": "http://www.linkedin.com/in/gbabula"
       }
     ],
     "thoughts": [
