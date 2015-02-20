@@ -8,7 +8,7 @@
 
 'use strict';
 
-var g5Knockout   = require('./g5-knockout').construct;
+var g5Knockout = require('./g5-knockout').construct;
 
 /**
  *
@@ -18,7 +18,8 @@ var g5Knockout   = require('./g5-knockout').construct;
 function onLoad() {
 
     var babulaHomeApp = g5Knockout({
-        container: document.getElementById('babula')
+        container: document.getElementById('babula'),
+        path: '/src/data/home.json'
     });
 
     babulaHomeApp.init();
