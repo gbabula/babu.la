@@ -36,15 +36,17 @@
         <!-- bundled JS -->
         <script src="src/static/bundle.js"></script>
 
-        <!-- home template : change to KO bindings -->
+        <!-- home template -->
         <script type="text/html" id="home-template">
 
             <header class="page-header" id="top">
                 <h1>
-                    <a href="{{ individual.header.url }}">
-                        {{ individual.header.title }}
+                    <a data-bind="attr: {
+                        href: $data.url
+                    }">
+                        <span data-bind="text: $data.name"></span>
                     </a>
-                    <small>{{ individual.header.subtitle }}</small>
+                    <small data-bind="text: $data.description"></small>
                 </h1>
             </header>
 
