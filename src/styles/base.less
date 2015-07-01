@@ -1,26 +1,46 @@
 /**
  *
  * file: base.less
- * description: base styling for lineups component
+ * description: base styling for info component
  *
  */
 
-.fed-component-lineups {
-    .clearfix();
+.g5-component--info {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1em 2em 2em;
+    margin: 1em auto;
+    max-width: 600px;
+    box-shadow: 0 .3em .3em rgba(142, 142, 142, 0.2);
 
-    color: #727272;
+    h1 {
+    }
 
-    table {
-        float: left;
-        margin-right: 20px;
-        width: 260px;
+    h2 {
+        color: rgb(131, 131, 131);
+        font-family: Times, serif;
+        font-size: 1.4em;
+    }
 
-        tbody {
-            tr {
-                td {
-                    border: none;
+    ul {
+        border-left: 2px solid rgb(237, 237, 237);
+        border-right: 2px solid rgb(237, 237, 237);
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            a {
+                display: block;
+                padding: 1em;
+                background: rgb(249, 249, 249);
+                font-size: 1.1em;
+
+                &:hover {
+                    background: rgb(237, 237, 237);
+                    text-decoration: none;
                 }
             }
         }
     }
+
 }

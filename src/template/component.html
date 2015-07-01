@@ -1,3 +1,5 @@
+
+
 <h1>
     <a href="{{url}}">{{name}}</a>
     <small>{{position.title}} @ {{position.company}}</small>
@@ -29,4 +31,16 @@
         </ul>
     {{/if}}
 
+    <h2>Elsewhere</h2>
+
+    {{#if social}}
+        <ul>
+            {{#each social}}
+                <li>
+                    <a href="{{url}}">{{title}}</a>
+                </li>
+            {{/each}}
+        </ul>
+    {{/if}}
+    
 {{/with}}
