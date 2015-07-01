@@ -2,6 +2,8 @@
 
 Small personal website, powered by [g5-component](https://github.com/MajorLeagueBaseball/g5-component)
 
+![babu.la screenshot](http://i.imgur.com/7SIOCpl.png?1)
+
 ---
 
 ###Setup
