@@ -1,6 +1,6 @@
 {
   "name": "babula",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Greg Babula personal website",
   "author": "Greg Babula",
   "license": "ISC",
@@ -47,10 +47,10 @@
     "server": "http-server -p 9966",
     "start": "npm run build && npm run server",
     "start-dev": "npm run server & npm run watch",
-    "build-js": "browserify src/scripts/index.js --standalone 'babula' | uglifyjs -mc > src/static/bundle.js",
+    "build-js": "browserify src/scripts/index.js | uglifyjs -mc > src/static/bundle.js",
     "build-css": "lessc src/styles/component.less > src/static/bundle.css",
     "build": "npm run build-js",
-    "watch-js": "watchify src/scripts/index.js --standalone 'babula' -o src/static/bundle.js -dv",
+    "watch-js": "watchify src/scripts/index.js -o src/static/bundle.js -dv",
     "watch-css": "catw -w -c 'lessc -' 'src/styles/component.less' -o src/static/bundle.css -v",
     "watch": "npm run watch-js",
     "test": "babel-tape-runner test/*.js | tap-spec"
