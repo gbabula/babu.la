@@ -2,6 +2,8 @@
 
 Small personal website, powered by [g5-component](https://github.com/MajorLeagueBaseball/g5-component)
 
+Clone the repo, update the [data file](https://github.com/gbabula/babu.la/blob/master/src/data/babula.json) and you're done! :beers:
+
 ![babu.la screenshot](http://i.imgur.com/7SIOCpl.png?1)
 
 ---
