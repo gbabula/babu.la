@@ -2,10 +2,6 @@
 
 ---
 
-####TODO
-- [ ] ko components implementation
-- [ ] use g5-knockout as scafold
-- [ ] updated viewModel layer
-- [ ] refactor
-- [ ] cleanup
-- [ ] etc...
+Small personal website, powered by [g5-component](https://github.com/MajorLeagueBaseball/g5-component)
+
+

@@ -5,139 +5,25 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Greg Babula | Software Engineer</title>
 
-        <meta name="description" content="Greg Babula, Software Engineer located in New York City." />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="description" content="Greg Babula, Software Engineer in New York City." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <meta property="og:title" content="Greg Babula, Software Engineer" />
-        <meta property="og:description" content="Greg Babula, Software Engineer located in New York City." />
+        <meta property="og:title" content="Greg Babula, User Interface Engineer" />
+        <meta property="og:description" content="Greg Babula, User Interface Engineer located in New York City." />
         <meta property="og:type" content="website" />
 
         <meta name="robots" content="index,follow" />
         <meta name="robots" content="noodp" />
-
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css" />
-        <link rel="stylesheet" href="src/static/bundle.css" />
     </head>
     <body>
 
-        <main id="babula" data-bind="attr: {
-            'class': $data.css,
-            'data-g5knockout-instance': $data.g5knockout_instance,
-            'data-g5knockout-visible': $data.g5knockout_visible,
-            'data-g5knockout-bound': $data.g5knockout_bound
-        }">
+        <main class="container">
 
-            <section data-bind="template: { name: 'home-template' }">
-                <span class="loading">Loading&hellip;</span>
-            </sction>
+            <section class="g5-component--info"></section>
 
         </main>
 
-        <!-- bundled JS -->
-        <script src="src/static/bundle.js"></script>
-
-        <!-- home template -->
-        <script type="text/html" id="home-template">
-
-            <header class="page-header" id="top">
-                <h1>
-                    <a data-bind="attr: {
-                        href: $data.url
-                    }">
-                        <span data-bind="text: $data.name"></span>
-                    </a>
-                    <small data-bind="text: $data.description"></small>
-                </h1>
-            </header>
-
-            <section class="content-primary content-primary-home">
-
-                <article>
-
-                    <h2>About</h2>
-
-                        <p class="muted"><em><span data-bind="text: $data.position.title"></span> at <a data-bind="attr: {
-                            href: $data.position.url
-                        }, text: $data.position.company"></a>.</em></p>
-
-                        <p class="muted"><em data-bind="$data.position.description"></em></p>
-
-                    </article>
-
-                <hr />
-
-                <div class="row">
-                    <div class="span6">
-                        <h3 id="expertise">Expertise</h3>
-
-                        <ul class="list-object unstyled">
-                            <!-- ko foreach: $data.expertise -->
-                                <li data-bind="text: $data"></li>
-                            <!-- /ko -->
-                        </ul>
-                    </div>
-
-                    <div class="span2">
-                        <h3 id="thoughts">Thoughts</h3>
-
-                        <ul class="list-object unstyled">
-                            <!-- ko foreach: $data.thoughts -->
-                                <li>
-                                    <a data-bind="attr: {
-                                        href: $data.url,
-                                        class: $data.title
-                                    }" target="_blank">
-                                        <span data-bind="text: $data.title"></span>
-                                    </a>
-                                </li>
-                            <!-- /ko -->
-                        </ul>
-                    </div>
-
-                    <div class="span2">
-                        <h3 id="projects">Projects</h3>
-
-                        <ul class="list-object unstyled">
-                            <!-- ko foreach: $data.projects -->
-                                <li>
-                                    <a data-bind="attr: {
-                                        href: $data.url,
-                                        class: $data.title
-                                    }" target="_blank">
-                                        <span data-bind="text: $data.title"></span>
-                                    </a>
-                                </li>
-                            <!-- /ko -->
-                        </ul>
-                    </div>
-
-                    <div class="span2">
-                        <h3 id="elsewhere">Elsewhere</h3>
-
-                        <ul class="list-object unstyled">
-                            <!-- ko foreach: $data.social -->
-                                <li>
-                                    <a data-bind="attr: {
-                                        href: $data.url,
-                                        class: $data.title
-                                    }" target="_blank">
-                                        <span data-bind="text: $data.title"></span>
-                                    </a>
-                                </li>
-                            <!-- /ko -->
-                        </ul>
-                    </div>
-                </div>
-
-            </section>
-
-            <footer class="page-footer" role="contentinfo">
-
-                <a href="#top" class="btn btn-link">Return Top</a>
-
-            </footer>
-
-        </script>
+        <script src="/src/static/bundle.js"></script>
 
     </body>
 </html>

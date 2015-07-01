@@ -1,0 +1,34 @@
+/**
+ *
+ * file: component.less
+ * description: lineups component styling
+ *
+ */
+
+@bootstrap_path: "node_modules/bootstrap/less";
+@scaffold_path: "node_modules/g5-component/src/styles";
+@local_path: "src/styles";
+
+// Core variables and mixins
+@import "@{bootstrap_path}/variables.less";
+@import "@{bootstrap_path}/mixins.less";
+
+// Reset and dependencies
+@import "@{bootstrap_path}/normalize.less";
+
+// Core CSS
+@import "@{bootstrap_path}/scaffolding.less";
+@import "@{bootstrap_path}/type.less";
+@import "@{bootstrap_path}/grid.less";
+@import "@{bootstrap_path}/tables.less";
+
+// Components
+@import "@{bootstrap_path}/alerts.less";
+
+// Utility classes
+@import "@{bootstrap_path}/utilities.less";
+@import "@{bootstrap_path}/responsive-utilities.less";
+
+// Component Specific
+@import "@{scaffold_path}/g5-component.less";
+@import "@{local_path}/base.less";

@@ -1,0 +1,32 @@
+<h1>
+    <a href="{{url}}">{{name}}</a>
+    <small>{{position.title}} @ {{position.company}}</small>
+</h1>
+
+{{#with information}}
+
+    <h2>Thoughts</h2>
+
+    {{#if thoughts}}
+        <ul>
+            {{#each thoughts}}
+                <li>
+                    <a href="{{url}}">{{title}}</a>
+                </li>
+            {{/each}}
+        </ul>
+    {{/if}}
+
+    <h2>Projects</h2>
+
+    {{#if projects}}
+        <ul>
+            {{#each projects}}
+                <li>
+                    <a href="{{url}}">{{title}}</a>
+                </li>
+            {{/each}}
+        </ul>
+    {{/if}}
+
+{{/with}}

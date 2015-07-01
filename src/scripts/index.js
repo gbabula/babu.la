@@ -1,14 +1,13 @@
 /**
  *
  * @module index
- * @description babu.la homepage
  * @author Greg Babula
  *
  */
 
 'use strict';
 
-var g5Knockout = require('./g5-knockout').construct;
+const g5Component = require('g5-component');
 
 /**
  *
@@ -17,12 +16,76 @@ var g5Knockout = require('./g5-knockout').construct;
  */
 function onLoad() {
 
-    var babulaHomeApp = g5Knockout({
-        container: document.getElementById('babula'),
-        path: '/src/data/home.json'
+    let linescoreComponent = g5Component({
+        container: document.querySelector('.g5-component--info'),
+        css: 'g5-component-info',
+        path: '/src/data/babula.json',
+        enablePolling: false
     });
 
-    babulaHomeApp.init();
+    // attach events before init
+    attachEvents(linescoreComponent);
+
+    // init component
+    linescoreComponent.init();
+
+}
+
+/**
+ *
+ * @function attachEvents
+ * @description event usage example
+ *
+ */
+function attachEvents(component) {
+
+    /**
+     *
+     * @event ready
+     * @param {Object} obj
+     *
+     */
+    component.on('ready', function(obj) {
+
+        console.log('component model and viewModel have been initiated');
+
+    });
+
+    /**
+     *
+     * @event data
+     * @param {Object} data
+     *
+     */
+    component.on('data', function(data) {
+
+        console.log('component data from model');
+
+    });
+
+    /**
+     *
+     * @event data-error
+     * @param {Object} err
+     *
+     */
+    component.on('data-error', function(err) {
+
+        console.log('component model data error');
+
+    });
+
+    /**
+     *
+     * @event destroy
+     * @param {Object} obj
+     *
+     */
+    component.on('destroy', function(obj) {
+
+        console.log('component instance killed');
+
+    });
 
 }
 

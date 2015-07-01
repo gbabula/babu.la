@@ -47,6 +47,10 @@
     ],
     "projects": [
       {
+        "title": "g5-component.js",
+        "url": "https://github.com/MajorLeagueBaseball/g5-component"
+      },
+      {
         "title": "g5-knockout.js",
         "url": "https://github.com/gbabula/g5-knockout"
       }
