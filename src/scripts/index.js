@@ -16,7 +16,7 @@ const g5Component = require('g5-component');
  */
 function onLoad() {
 
-    let linescoreComponent = g5Component({
+    let infoComponent = g5Component({
         container: document.querySelector('.g5-component--info'),
         css: 'g5-component-info',
         path: '/src/data/babula.json',
@@ -24,10 +24,10 @@ function onLoad() {
     });
 
     // attach events before init
-    attachEvents(linescoreComponent);
+    attachEvents(infoComponent);
 
     // init component
-    linescoreComponent.init();
+    infoComponent.init();
 
 }
 
