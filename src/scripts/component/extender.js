@@ -7,7 +7,7 @@
 
 'use strict';
 
-const _ = require('lodash');
+const merge = require('lodash/object/merge');
 
 /**
  *
@@ -18,7 +18,7 @@ const _ = require('lodash');
  */
 function extender(data={}) {
 
-    return _.merge(data, {
+    return merge(data, {
         //
     });
 
